@@ -93,35 +93,38 @@
 
 //  customizing views Directroy 
 // l-7
-// const express  = require('express')
-// const path  = require('path')
-// const app = express();
-// const hbs  = require('hbs')
-// const port = 3000;
+const express  = require('express')
+const path  = require('path')
+const app = express();
+const hbs  = require('hbs')
+const port = 3000;
 
-// app.set("view engine",'hbs');
-// app.set('views',path.join(__dirname,'./tempu/views'));
-// hbs.registerPartials(path.join(__dirname,'./tempu/Partials'))
+app.set("view engine",'hbs');
+app.set('views',path.join(__dirname,'./tempu/views'));
+hbs.registerPartials(path.join(__dirname,'./tempu/Partials'))
 
 // app.use(express.static(path.join(__dirname,'./hello')))
 
-// app.get("/",(req,res)=>{
-//     res.render('index')
-// })
-// //  set the views engine
+app.get("/",(req,res)=>{
+    res.render('index')
+})
+//  set the views engine
 
-// app.get('/about',(req,res)=>{
-//    res.render('about')
-// })
+app.get('/about',(req,res)=>{
+   res.render('about')
+})
+app.get('*',(req,res)=>{
+   res.render('404',{
+    erroecomnent:  "not found",
+   });
+   
+})
 
 
-// app.listen(port,()=>{
+app.listen(port,()=>{
     
-//     console.log(`listen the the poet number ${port}`);
-// })
+    console.log(`listen the the poet number ${port}`);
+})
 
 
 
-// use partials in express js
-
-// 404error page in dynamic website
