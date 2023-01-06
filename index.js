@@ -123,4 +123,5 @@
 
 
 // use partials in express js
+
 // 404error page in dynamic website
