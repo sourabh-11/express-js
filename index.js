@@ -1,60 +1,126 @@
-const express = require('express')
-const app = express()
-const port = 3000
+// const express  = require('express')
+// const app = express();
+// const port = 3000;
 
+// app.get('/',(req,res)=>{
+//     // console.log("hello");
+//     res.send("This is an home page")
+// })
+// app.get('/about',(req,res)=>{
+//     // console.log("hello");
+//     res.send("This is an about page")
+// })
+// app.get('/contact page',(req,res)=>{
+//     // console.log("hello");
+//     res.send("hello")
+// })
 
-// Routing
-app.get('/',(req,res)=>
-{
-  res.send("hello")
-})
+// app.listen(port,()=>{
+    
+//     console.log(`listen the the poet number ${port}`);
+// })
 
-// app.get('/ab*cd', (req, res) => {
-//   res.send('done')
+// l-3
+// how to send json data
+// const express  = require('express')
+// const app = express();
+// const port = 3000;
+
+// app.get('/',(req,res)=>{
+//     // console.log("hello");
+//     res.send("This is an home page")
+// })
+// app.get('/about',(req,res)=>{
+//     // console.log("hello");
+//     res.json([{
+//         name: "sourabhh",
+//         num: 24,
+//     },
+//     {
+//         name: "sourabhh",
+//         id: 24,
+//     },{
+//         name: "sourabhh",
+//         id: 24,
+//     },{
+//         name: "sourabhh",
+//         id: 24,
+//     }])
 
 // })
-//   // Route handlers
-//   const cb0 = function (req, res, next) {
-//     console.log('CB0')
-//     next()
-//   }
+// app.get('/contact page',(req,res)=>{
+//     // console.log("hello");
+//     res.send("hello")
+// })
 
-  
-//   const cb1 = function (req, res, next) {
-//     console.log('CB1')
-//     next()
-//   }
-  
-//   app.get('/example/d', [cb0, cb1], (req, res, next) => {
-//     console.log('the response will be sent by the next function ...')
-//     next()
-//   }, (req, res) => {
-//     res.send('Hello from D!')
-//   })
+// app.listen(port,()=>{
+    
+//     console.log(`listen the the poet number ${port}`);
+// })
 
+// l-4
+// how to serve static website
 
+// const express  = require('express')
+// const path  = require('path')
+// const app = express();
+// const port = 3000;
+// app.use(express.static(path.join(__dirname,'./hello')))
 
 
-const express = require('express')
-const router = express.Router()
+// //  set the views engine
 
-// middleware that is specific to this router
-router.use((req, res, next) => {
-  console.log('Time: ', Date.now())
-  next()
-})
-// define the home page route
-router.get('/', (req, res) => {
-  res.send('Birds home page')
-})
-// define the about route
-router.get('/about', (req, res) => {
-  res.send('About birds')
-})
-
-module.exports = router;
+// app.get('/',(req,res)=>{
+//     // console.log("hello");
+//     res.send("This is an home page")
+// })
+// app.get('/about',(req,res)=>{
+//     // console.log("hello");
+//     res.send("This is an about page")
+// })
 
 
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+// app.listen(port,()=>{
+    
+//     console.log(`listen the the poet number ${port}`);
+// })
+
+
+// l-6
+// template Engine in express js (add dynamic data contains)
+ 
+// and
+
+//  customizing views Directroy 
+// l-7
+// const express  = require('express')
+// const path  = require('path')
+// const app = express();
+// const hbs  = require('hbs')
+// const port = 3000;
+
+// app.set("view engine",'hbs');
+// app.set('views',path.join(__dirname,'./tempu/views'));
+// hbs.registerPartials(path.join(__dirname,'./tempu/Partials'))
+
+// app.use(express.static(path.join(__dirname,'./hello')))
+
+// app.get("/",(req,res)=>{
+//     res.render('index')
+// })
+// //  set the views engine
+
+// app.get('/about',(req,res)=>{
+//    res.render('about')
+// })
+
+
+// app.listen(port,()=>{
+    
+//     console.log(`listen the the poet number ${port}`);
+// })
+
+
+
+// use partials in express js
+// 404error page in dynamic website
